@@ -1,0 +1,23 @@
+{% extends 'FinanceMasterApp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <h1>FinanceMaster</h1>
+{% endblock title%}
+
+{% block register %}
+<div class=" bg-light m-3 p-3">
+    <h1>Top 5 most expensive Cryptocurrencies</h1>
+    <h2>Per CoinMarketCap</h2>
+      
+    <h3><strong>Bitcoin: </strong>£{{responseB}}</h3>
+    <h3><strong>Ethereum: </strong>£{{responseC}}</h3>
+    <h3><strong>Maker: </strong>£{{responseD}}</h3>
+    <h3><strong>BNB: </strong>£{{responseE}}</h3>
+    <h3><strong>Bitcoin Cash: </strong>£{{responseF}}</h3>
+     
+      
+    
+    
+</div>
+{% endblock register %}

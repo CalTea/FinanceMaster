@@ -1,0 +1,73 @@
+{% extends 'FinanceMasterApp/base.html' %}
+
+{% block title %}
+    <h1>Portfolio Overview for {{user.username}}</h1>
+{% endblock title %}
+
+
+
+{% block asset %}
+    <u><h5>Asset</h5></u>
+{% endblock asset %}
+
+<!--Display Users Asset-->
+{% block assetvalue %}
+    {% for assetDetails in assetDetails %}
+        <a href="{% url 'asset' assetDetails.id  %}">
+        <p><strong>{{assetDetails.asset}}</strong></p>
+        </a>
+    {% endfor %}
+{% endblock assetvalue %}
+
+<!--Display Exchange of Asset-->
+{% block exchange %}
+    <u><h5>Exchange</h5></u>
+{% endblock exchange %}
+
+{% block exchangevalue %}
+    {% for assetDetails in assetDetails %}
+        <p><strong>{{assetDetails.exchange}}</strong></p>
+    {% endfor %}
+{% endblock exchangevalue %}
+
+<!--Display Amount of Asset-->
+{% block qty %}
+    <u><h5>qty</h5></u>
+{% endblock qty %}
+
+{% block qtyvalue %}
+    {% for assetDetails in assetDetails %}
+        <p><strong>{{assetDetails.qty}}</strong></p>
+    {% endfor %}
+{% endblock qtyvalue %}
+
+
+<!--Display Price of Asset-->
+{% block price %}
+    <u><h5>Price of Asset (£)</h5></u>
+{% endblock price %}
+
+{% block pricevalue %}
+    {% for assetDetails in assetDetails %}
+        <p><strong>{{assetDetails.price}}</strong></p>
+    {% endfor %}
+{% endblock pricevalue %}
+
+
+<!--Display Total Cost of Asset-->
+{% block total %}
+    <u><h5>Total Holding (£)</h5></u>
+{% endblock total %}
+
+{% block totalvalue %}
+    {% for assetDetails in assetDetails %}
+        <p><strong>{{assetDetails.total}}</strong></p>
+    {% endfor %}
+{% endblock totalvalue %}
+
+{% block add-asset %}
+    <a href="{% url 'addasset' %}">
+    <button type="button" class="btn btn-lg">Add Asset</button>
+    </a>
+
+{% endblock add-asset %}    

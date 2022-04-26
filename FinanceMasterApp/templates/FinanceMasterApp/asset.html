@@ -1,0 +1,28 @@
+{% extends 'FinanceMasterApp/base.html' %}
+
+{% block title %}
+    <h1>Asset Details</h1>
+{% endblock title %}
+
+{% block register %}
+    <div class="p-4 m-4 bg-light">
+        <h1>Asset Holder: <strong>{{user.username}}</strong></h1>
+        <h1>Asset: <strong>{{asset}}</strong></h1>
+        <h1>Exchange <strong>{{asset.exchange}}</strong></h1>
+        <h1>Total Value: <strong>£{{asset.total}}</strong></h1>
+    </div>
+
+    <div class="p-4 m-4">
+        <a href="{% url 'index' %}">
+            <button type="button" class="btn btn-lg">Back</button>
+            </a>
+
+        <a href="{% url 'updateasset' asset.id %}">
+            <button type="button" class="btn btn-lg">Edit Asset</button>
+        </a>
+
+        <a href="{% url 'deleteasset' asset.id %}">
+            <button type="button" class="btn btn-lg">Delete Asset</button>
+        </a>
+    </div>
+{% endblock register %}

@@ -1,0 +1,24 @@
+{% extends 'FinanceMasterApp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <h1>FinanceMaster Registration</h1>
+{% endblock title%}
+
+{% block register %}
+<div class="form-configure form-group p-3 m-3 bg-light">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="mb-2">Register</legend>
+            {{ form| crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn" type="submit">Sign Up!</button>
+        </div>
+    </form>
+    <div class="border-top">
+        <small class="text-muted">Already Registered? <a class='nav-link' href="{% url 'login' %}">Log In</a></small>
+    </div>
+</div>
+{% endblock register %}

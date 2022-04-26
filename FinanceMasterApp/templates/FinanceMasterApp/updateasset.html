@@ -1,0 +1,21 @@
+{% extends 'FinanceMasterApp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <h1>FinanceMaster</h1>
+{% endblock title%}
+
+{% block register %}
+<div class="form-configure form-group">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="mb-2">Edit Asset for {{user.username}}</legend>
+            {{ form| crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn" type="submit">Edit Asset!</button>
+        </div>
+    </form>
+</div>
+{% endblock register %}

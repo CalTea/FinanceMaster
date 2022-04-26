@@ -1,0 +1,11 @@
+{% extends 'FinanceMasterApp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <h1>User Details</h1>
+{% endblock title %}
+
+
+{% block login %}
+    <h1>{{ user.username }}</h1>
+{% endblock login %}

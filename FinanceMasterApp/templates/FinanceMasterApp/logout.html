@@ -1,0 +1,16 @@
+{% extends 'FinanceMasterApp/base.html' %}
+
+{% block title %}
+    <h1>FinanceMaster logout</h1>
+{% endblock title%}
+
+{% block logout %}
+    <div class="text-center p-3 m-3">
+        <h2>You have logged out </h2>
+    </div>
+    
+    <div class="">
+        <small class="text-muted text-center"> <a class='nav-link' href="{% url 'login' %}"><h2>Log In</h2></a></small>
+    </div>
+</div>
+{% endblock logout %}
