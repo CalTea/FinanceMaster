@@ -3,6 +3,8 @@ Repo dedicated to the FinanceMaster project.
 
 To run the web app locally:
 
+Download as ZIP (Or clone)
+
 Make sure Python & Pip is installed on your system
 
 pip install Django
